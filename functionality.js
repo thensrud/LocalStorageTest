@@ -1,16 +1,17 @@
 
+// SAVE NAMES
+
 const saveNameBtn = document.getElementById("saveNameBtn");
-const clearBtn = document.getElementById("clearBtn");
 const nameOutputDiv = document.getElementById("name_output_div");
 
 saveNameBtn.onclick = function () {
-  const user_input_names = document.getElementById("user_input_names").value;
+  let user_input_names = document.getElementById("user_input_names").value;
   const nameList = JSON.parse(window.localStorage.getItem("nameList")) || [];
   nameList.push(user_input_names);
   window.localStorage.setItem("nameList", JSON.stringify(nameList));
   renderNames();
 
-  document.getElementById("user_input_names").value = "";
+  user_input_names = "";
 };
 
 function renderNames () {
@@ -22,7 +23,37 @@ function renderNames () {
   }
 }
 
+// SAVE TASKS
+
+const saveTaskBtn = document.getElementById("saveTaskBtn");
+const taskOutputDiv = document.getElementById("task_output_div");
+
+saveTaskBtn.onclick = function () {
+  let user_input_tasks = document.getElementById("user_input_tasks").value;
+  const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
+  taskList.push(user_input_tasks);
+  window.localStorage.setItem("taskList", JSON.stringify(taskList));
+  renderTasks();
+
+  user_input_tasks = "";
+};
+
+function renderTasks () {
+  const taskListJSON = window.localStorage.getItem("taskList");
+  const taskList = JSON.parse(taskListJSON) || [];
+  taskOutputDiv.innerHTML = "";
+  for (const user_input_tasks of taskList) {
+    taskOutputDiv.innerHTML += `<div class="output_card">${user_input_tasks}</div>`;
+  }
+}
+
+
+// CLEAR LOCAL STORAGE AND OUTPUT
+
+const clearBtn = document.getElementById("clearBtn");
+
 clearBtn.onclick = function () {
   window.localStorage.clear();
   nameOutputDiv.innerHTML = "";
+  taskOutputDiv.innerHTML = "";
 };
