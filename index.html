@@ -10,22 +10,38 @@
 
     <div class="fieldset_container">
       <fieldset>
-        <legend>Lagre noen ord</legend>
-        <input id="user_input" type="text" />
-        <button id="saveBtn" type="button">Lagre</button>
+        <legend>Skriv inn og lagre navn</legend>
+        <input id="user_input_names" type="text" />
+        <button id="saveNameBtn" type="button">Lagre</button>
       </fieldset>
     </div>
 
     <div class="fieldset_container">
       <fieldset>
-        <legend>Tøm Local Storage</legend>
+        <legend>Skriv inn og lagre oppgaver</legend>
+        <input id="user_input_tasks" type="text" />
+        <button id="saveTaskBtn" type="button">Lagre</button>
+      </fieldset>
+    </div>
+
+    <div class="fieldset_container">
+      <fieldset>
+        <legend>Tøm LocalStorage</legend>
         <button id="clearBtn" type="button">Fjern alt</button>
       </fieldset>
     </div>
 
-    <div id="output_fieldset" class="fieldset_container">
+    <div id="name_output_fieldset" class="fieldset_container">
       <fieldset>
-        <legend>Lagrede ord</legend>
+        <legend>Lagrede navn</legend>
+        <div id="name_output_div">
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="task_output_fieldset" class="fieldset_container">
+      <fieldset>
+        <legend>Lagrede oppgaver</legend>
         <div id="output_div">
         </div>
       </fieldset>
