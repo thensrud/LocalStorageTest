@@ -1,3 +1,47 @@
 body {
-  background-color: orange;
+  background-color: darkblue;
+  color: white;
+}
+
+.fieldset_container {
+  display: inline-block;
+  background-color: white;
+}
+
+fieldset {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 20px;
+}
+
+#output_fieldset {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+  width: 700px;
+}
+
+input {
+  height: 25px;
+}
+
+#saveBtn {
+  font-weight: bold;
+  color: green;
+  height: 30px;
+}
+
+#clearBtn {
+  font-weight: bold;
+  color: red;
+  height: 30px;
+  width: 125px;
+}
+
+.output_card {
+  border: solid 1px grey;
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 10px;
 }

@@ -8,13 +8,30 @@
   <body>
     <h1>Test av LocalStorage</h1>
 
-    <div class="">
-      <form>
-        <label>Skriv inn noen ord for å lagre:</label>
-        <input type="text" id="user_input" />
-        <input type="button" value="Save" onclick="save()" />
-      </form>
+    <div class="fieldset_container">
+      <fieldset>
+        <legend>Lagre noen ord</legend>
+        <input id="user_input" type="text" />
+        <button id="saveBtn" type="button">Lagre</button>
+      </fieldset>
     </div>
+
+    <div class="fieldset_container">
+      <fieldset>
+        <legend>Tøm Local Storage</legend>
+        <button id="clearBtn" type="button">Fjern alt</button>
+      </fieldset>
+    </div>
+
+    <div id="output_fieldset" class="fieldset_container">
+      <fieldset>
+        <legend>Lagrede ord</legend>
+        <div id="output_div">
+        </div>
+      </fieldset>
+    </div>
+
+
 
     <script type="text/javascript" src="functionality.js"></script>
 
